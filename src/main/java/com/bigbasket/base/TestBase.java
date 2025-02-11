@@ -22,22 +22,16 @@ public class TestBase {
 //		keyword.maximizeBrowser();
 //	}
 	
-	
-	@BeforeMethod
-    @Parameters("browser-name")  // Takes browser name from testng.xml
-    public void setUp(String browserName) throws Exception {
-        if (browserName == null || browserName.isEmpty()) {
-            browserName = "Chrome";  // Default to Chrome if not provided
-        }
-        keyword.openBrowser(browserName);
+    @BeforeMethod(groups = { "RegressionTests", "SanityTests" })
+    public void setUp() throws Exception {
+        keyword.openBrowser("Firefox");
         keyword.launchUrl("https://www.bigbasket.com/");
         keyword.maximizeBrowser();
     }
-	
-	
-
-	@AfterMethod(groups = { "RegressionTests", "SanityTests" })
-	public void tearDown() {
-		keyword.quitBrowser();
-	}
+    
+    @Parameters("browser-name")
+    @AfterMethod(groups = { "RegressionTests", "SanityTests" })
+    public void tearDown() {
+        keyword.quitBrowser(); 
+    }
 }

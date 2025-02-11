@@ -30,7 +30,8 @@ public class ProductSearchPage {
 
 	public void clickOnProduct() {
 	    try {
-	    	Thread.sleep(2000);	       
+	    	Thread.sleep(2000);	  
+	    	WaitFor.visibilityOfElement(ClickonProduct);
 	    	ClickonProduct.click();  
 	        System.out.println("Clicked on product.");
 	    } catch (StaleElementReferenceException e) {
@@ -48,7 +49,7 @@ public class ProductSearchPage {
 	}
 
 	public void getActualSearchProductTitleText() throws InterruptedException {
-		Thread.sleep(1000);;
+		WaitFor.untilUrlLoad("https://www.bigbasket.com/ps");
 		WaitFor.visibilityOfElement(actualProductTitleText);
 		String  actualProductTitleTest = actualProductTitleText.getText();
 		System.out.println("Actual Product Title: " + actualProductTitleTest);

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Cross-browser Testing" thread-count="5">
+<suite name="Cross-browser Testing" thread-count="3">
 	<!-- <suite name="Cross-browser Testing" parallel="tests" thread-count="3"> -->
 
-	<test name="ChromeTest">
+	<test name="Chrome">
 		<parameter name="browser-name" value="Chrome"></parameter>
 		<classes>
 			<class name="com.testcases.ProductDetailTests" />
 		</classes>
 	</test>
 
-	<test name="FirefoxTest">
+	<test name="Firefox">
 		<parameter name="browser-name" value="Firefox"></parameter>
 		<classes>
 			<class name="com.testcases.ProductDetailTests" />
 		</classes>
 	</test>
 
-	<test name="EdgeTest">
+	<test name="edge">
 		<parameter name="browser-name" value="edge"></parameter>
 		<classes>
 			<class name="com.testcases.ProductDetailTests" />
