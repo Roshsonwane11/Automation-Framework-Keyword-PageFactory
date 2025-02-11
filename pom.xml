@@ -5,9 +5,15 @@
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
   	<dependency>
-  		<groupId>com.AmazonTestCase1</groupId>
-  		<artifactId>AmazonTestCase1</artifactId>
-  		<version>1.0.0</version>
-  	</dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.27.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.10.2</version>
+		</dependency>
   </dependencies>
 </project>
