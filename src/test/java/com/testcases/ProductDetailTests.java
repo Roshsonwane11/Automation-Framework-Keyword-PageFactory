@@ -1,12 +1,15 @@
 package com.testcases;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import com.bigbasket.Listeners.TestListener;
 import com.bigbasket.base.TestBase;
 import com.pagefactorypages.HomePage;
 import com.pagefactorypages.ProductDetailPage;
 import com.pagefactorypages.ProductSearchPage;
 
-
+@Listeners(TestListener.class)
 public class ProductDetailTests extends TestBase {
 	@Test(priority = 1, groups = "SanityTests")
 	public void verifyWhenUserSearchProductAfterUrlWillChangedOnSameTab() throws InterruptedException {
@@ -25,7 +28,7 @@ public class ProductDetailTests extends TestBase {
 		productDetailPage.switchWindowOnproductDetailPage();
 		productDetailPage.verifyAfterClickOnProductThenProductUrlTitleChanged();
 	}
-/*
+
 	@Test(priority = 3)
 	public void verifyWhenUserClickOnProductThenProductPageURlchanged() {
 		HomePage homePage = new HomePage();
@@ -164,5 +167,5 @@ public class ProductDetailTests extends TestBase {
 		productDetailPage.switchWindowOnproductDetailPage();
 		productDetailPage.verifyAfterclickOnProductPackSizeFor500mlProductPriceWillChange();
 	}
-	*/
+	
 }
