@@ -1,5 +1,4 @@
 package com.bigbasket.Listeners;
-
 import java.io.File;
 import java.io.IOException;
 import org.openqa.selenium.OutputType;
@@ -7,7 +6,6 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import com.bigbasket.base.Keyword;
 import com.google.common.io.Files;
-
 public class TestListener implements ITestListener {
 
 	@Override
@@ -21,7 +19,6 @@ public class TestListener implements ITestListener {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	@Override
