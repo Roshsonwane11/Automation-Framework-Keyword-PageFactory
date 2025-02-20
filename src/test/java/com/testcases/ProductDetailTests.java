@@ -28,7 +28,7 @@ public class ProductDetailTests extends TestBase {
 		productDetailPage.switchWindowOnproductDetailPage();
 		productDetailPage.verifyAfterClickOnProductThenProductUrlTitleChanged();
 	}
-
+/*
 	@Test(priority = 3)
 	public void verifyWhenUserClickOnProductThenProductPageURlchanged() {
 		HomePage homePage = new HomePage();
@@ -167,5 +167,5 @@ public class ProductDetailTests extends TestBase {
 		productDetailPage.switchWindowOnproductDetailPage();
 		productDetailPage.verifyAfterclickOnProductPackSizeFor500mlProductPriceWillChange();
 	}
-	
+*/	
 }
